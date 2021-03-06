@@ -13,6 +13,10 @@ def index():
   age = int((datetime.date.today() - datetime.date(2007, 4, 22)).days / 365)
   return render_template('home.html', age=age)
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
 if __name__ == "__main__":
   print("App run on port 8080")
   app.run(host="127.0.0.1", port=8080, debug=True)
