@@ -1,3 +1,4 @@
+
 {% extends "base.html" %}
 
 {% block head %}
@@ -9,7 +10,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <script src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.1/typed.min.js'></script>
 
-<link type="text/css" rel="stylesheet" href="/static/css/home.css">
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename = 'css/home.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename = 'js/home.js') }}"></script>
 <script src="/static/js/home.js"></script>
 {% endblock %}
 
@@ -18,24 +20,24 @@
   <div class="wrapper fixed-wrapper">
     <section id="terminal">
       <div id="terminal-container">
-        <div class="terminal">
-          <div class="window-title">
-            <div class="win-buttons">
-              <a id="close" class="button" href="#"></a>
-              <a id="min" class="button" href="#"></a>
-              <a id="max" class="button" href="#"></a>
-            </div>
-            <span class="title">oh-my-zsh</span>
+          <div class="terminal">
+              <div class="window-title">
+                  <div class="win-buttons">
+                      <a id="close" class="button" href="#"></a>
+                      <a id="min" class="button" href="#"></a>
+                      <a id="max" class="button" href="#"></a>
+                  </div>
+                  <span class="title">oh-my-zsh</span>
+              </div>
+              <div class="message">
+                  <span class='prompt'><span class='user'>andrew</span><span class="at">@</span><span
+                          class="path">/home/andrew/</span>><span class="caret">$</span></span>
+                  <span class="typed"></span>
+                  <form>><span class="caret">$</span>&nbsp;<input type="text" name="response"/></form>
+              </div>
           </div>
-        </div>
-        <div class="message">
-          <span class='prompt'><span class='user'>andrew</span><span class="at">@</span><span
-                  class="path">/home/andrew/</span>><span class="caret">$</span></span>
-          <span class="typed"></span>
-          <form>><span class="andrew">$</span>&nbsp;<input type="text" name="response"/></form>
-        </div>
       </div>
-    </section>
+  </section>
   </div>
   <div class="wrapper scroll-wrapper">
     <div class="top-text">
@@ -64,12 +66,12 @@
         I work at AuraSide, Inc. as a Junior Software-Developer working on mantle.gg, and hone.gg.
       </p>
       <p class="text-content">
-        I am a high school student at , And currently studying to get the AWS Developer Associate certifaction.
+        I am a high school student at Pere Philippe La Marche, And currently studying to get the AWS Developer Associate certifaction.
       </p>
       <p class="text-content">
-        I'm a hockey player I speak English, French.
+        I'm a hockey player I speak English, French and I love building discord-bots as a side-hobby.
       </p>
-      <p class="text-content">You can find me on <a href="http://in.linkedin.com/in/andrewnijmeh/">Linkden</a>
+      <p class="text-content">You can find me on <a href="https://www.linkedin.com/in/andrew-nijmeh-1a6726200/">Linkden</a>
         or email me <a href="mailto:andrewnijmeh1@gmail.com?Subject=Hello%20Andrew%20-from-website" target="_top">Here</a>
       </p>
 
